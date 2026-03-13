@@ -3,6 +3,5 @@ import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   integrations: [mdx()],
-  site: 'https://vladi-rosp.github.io',
-  base: '/vladimir-site',
+  site: 'https://vladimirsrp.com',
 });
