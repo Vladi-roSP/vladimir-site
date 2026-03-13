@@ -1,5 +1,5 @@
 ---
-
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <section class="hero">
@@ -13,13 +13,13 @@
           exploring how computational methods can address real-world challenges in public policy and society.
         </p>
         <div class="hero-cta">
-          <a href="/research" class="btn btn-primary">Explore Research</a>
-          <a href="/contact" class="btn btn-outline">Let's Talk &nearr;</a>
+          <a href={`${base}/research`} class="btn btn-primary">Explore Research</a>
+          <a href={`${base}/contact`} class="btn btn-outline">Let's Talk &nearr;</a>
         </div>
       </div>
       <div class="hero-photo fade-in">
         <div class="photo-frame">
-          <img src="/images/vladimir.jpg" alt="S. Vladimir Rodríguez" />
+          <img src={`${base}/images/vladimir.jpg`} alt="S. Vladimir Rodríguez" />
         </div>
       </div>
     </div>

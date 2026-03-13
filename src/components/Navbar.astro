@@ -1,18 +1,19 @@
 ---
 const pathname = Astro.url.pathname;
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/research', label: 'Research' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: `${base}/`, label: 'Home' },
+  { href: `${base}/research`, label: 'Research' },
+  { href: `${base}/experience`, label: 'Experience' },
+  { href: `${base}/blog`, label: 'Blog' },
+  { href: `${base}/contact`, label: 'Contact' },
 ];
 ---
 
 <nav class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="/" class="nav-logo">
+    <a href={`${base}/`} class="nav-logo">
       S. VLADIMIR<br /><span class="accent">RODRÍGUEZ.</span>
     </a>
 

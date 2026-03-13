@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="S. Vladimir Rodríguez — Researcher & Student">
@@ -23,7 +24,7 @@ import Hero from '../components/Hero.astro';
             Currently, I'm involved in research on process mining, Petri net modeling, and pool testing
             algorithms, while also working as a technology consultant leading process automation initiatives.
           </p>
-          <a href="/experience" class="btn btn-outline">More About Me &nearr;</a>
+          <a href={`${base}/experience`} class="btn btn-outline">More About Me &nearr;</a>
         </div>
         <div class="about-education fade-in">
           <div class="edu-card">
@@ -67,7 +68,7 @@ import Hero from '../components/Hero.astro';
         </div>
       </div>
       <div class="section-cta fade-in">
-        <a href="/research" class="btn btn-outline">View All Research &nearr;</a>
+        <a href={`${base}/research`} class="btn btn-outline">View All Research &nearr;</a>
       </div>
     </div>
   </section>
@@ -78,7 +79,7 @@ import Hero from '../components/Hero.astro';
       <div class="cta-box fade-in">
         <h2>Have an idea?<br /><span class="accent">Let's collaborate.</span></h2>
         <p>I'm always open to discussing research opportunities, collaborations, and interesting projects.</p>
-        <a href="/contact" class="btn btn-primary">Get in Touch</a>
+        <a href={`${base}/contact`} class="btn btn-primary">Get in Touch</a>
       </div>
     </div>
   </section>
