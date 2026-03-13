@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Research — S. Vladimir Rodríguez">
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label fade-in">RESEARCH</span>
+      <h1 class="fade-in">Research</h1>
+      <p class="page-desc fade-in">
+        My research interests span algorithm design, artificial intelligence, process mining,
+        and the societal implications of emerging technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Research Interests -->
+  <section class="section">
+    <div class="container">
+      <h2 class="fade-in">Research Interests</h2>
+      <div class="interests-grid">
+        <div class="interest-card fade-in">
+          <h3>Algorithm Design</h3>
+          <p>Developing efficient computational methods for solving complex optimization and decision-making problems.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Artificial Intelligence</h3>
+          <p>Exploring AI systems and their applications, from machine learning models to intelligent automation.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Process Mining</h3>
+          <p>Analyzing event logs to discover, monitor, and improve real-world processes through data-driven insights.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Mathematical Modeling</h3>
+          <p>Building mathematical frameworks to represent and simulate complex systems across disciplines.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Public Policy</h3>
+          <p>Investigating how computational tools and data analysis can inform evidence-based policy decisions.</p>
+        </div>
+        <div class="interest-card fade-in">
+          <h3>Societal Impact of AI</h3>
+          <p>Examining the ethical, social, and political dimensions of artificial intelligence deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Papers -->
+  <section class="section papers-section">
+    <div class="container">
+      <h2 class="fade-in">Papers</h2>
+      <div class="papers-list">
+        <div class="paper-item fade-in">
+          <div class="paper-number">01</div>
+          <div class="paper-content">
+            <h3>"A Survey on the State of the Art in Process Mining"</h3>
+            <p class="paper-authors">With J. C. Tejada Orjuela</p>
+            <p class="paper-desc">
+              A comprehensive review of current methodologies, tools, and applications in the field of process mining,
+              covering process discovery, conformance checking, and enhancement techniques.
+            </p>
+            <span class="status-badge">In preparation</span>
+          </div>
+        </div>
+        <div class="paper-item fade-in">
+          <div class="paper-number">02</div>
+          <div class="paper-content">
+            <h3>"System Modeling with Petri Nets: Methods and Applications"</h3>
+            <p class="paper-authors">With A. Cardeña Matamoros</p>
+            <p class="paper-desc">
+              An exploration of Petri net formalisms for modeling concurrent and distributed systems,
+              with applications to workflow analysis and system verification.
+            </p>
+            <span class="status-badge">In preparation</span>
+          </div>
+        </div>
+        <div class="paper-item fade-in">
+          <div class="paper-number">03</div>
+          <div class="paper-content">
+            <h3>"Dynamic Augmented Pool Testing"</h3>
+            <p class="paper-authors">With F. Marmolejo-Cossío</p>
+            <p class="paper-desc">
+              Developing adaptive algorithms for group testing that dynamically adjust pool sizes and testing strategies
+              to optimize resource usage and detection accuracy.
+            </p>
+            <span class="status-badge">In preparation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 10rem 0 3rem;
+    background: var(--surface);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 1rem;
+  }
+
+  .page-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .interest-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .interest-card:hover {
+    border-color: rgba(200, 121, 65, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .interest-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .interest-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .papers-section {
+    background: var(--surface);
+  }
+
+  .papers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .paper-item {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--bg);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.3s;
+  }
+
+  .paper-item:hover {
+    border-color: rgba(200, 121, 65, 0.3);
+  }
+
+  .paper-number {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    min-width: 30px;
+    padding-top: 0.25rem;
+  }
+
+  .paper-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .paper-authors {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .paper-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .paper-item {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

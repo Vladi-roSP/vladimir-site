@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="S. Vladimir Rodríguez — Researcher & Student">
+  <Hero />
+
+  <!-- About Me Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <span class="section-label fade-in">ABOUT ME</span>
+      <div class="about-grid">
+        <div class="fade-in">
+          <h2>Transforming Ideas into<br /><span class="accent">Impactful Research</span></h2>
+          <p class="about-text">
+            I'm pursuing a dual academic path — a B.Sc. in Physics at Universidad Iberoamericana
+            and a B.A. in Political Science at UNAM — driven by the conviction that the most
+            pressing challenges of our time demand interdisciplinary solutions. My work sits
+            at the intersection of computation and society, where algorithm design meets public policy.
+          </p>
+          <p class="about-text">
+            Currently, I'm involved in research on process mining, Petri net modeling, and pool testing
+            algorithms, while also working as a technology consultant leading process automation initiatives.
+          </p>
+          <a href="/experience" class="btn btn-outline">More About Me &nearr;</a>
+        </div>
+        <div class="about-education fade-in">
+          <div class="edu-card">
+            <h4>Universidad Iberoamericana</h4>
+            <p>B.Sc. in Physics</p>
+            <span class="edu-year">2022 – 2026 (expected)</span>
+          </div>
+          <div class="edu-card">
+            <h4>UNAM</h4>
+            <p>B.A. in Political Science</p>
+            <span class="edu-year">2022 – 2028 (expected)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Research Section -->
+  <section class="section research-preview">
+    <div class="container">
+      <span class="section-label fade-in">RESEARCH</span>
+      <h2 class="fade-in">Current Research</h2>
+      <div class="research-cards">
+        <div class="research-card fade-in">
+          <div class="card-number">01</div>
+          <h3>A Survey on the State of the Art in Process Mining</h3>
+          <p class="card-meta">With J. C. Tejada Orjuela</p>
+          <span class="status-badge">In preparation</span>
+        </div>
+        <div class="research-card fade-in">
+          <div class="card-number">02</div>
+          <h3>System Modeling with Petri Nets: Methods and Applications</h3>
+          <p class="card-meta">With A. Cardeña Matamoros</p>
+          <span class="status-badge">In preparation</span>
+        </div>
+        <div class="research-card fade-in">
+          <div class="card-number">03</div>
+          <h3>Dynamic Augmented Pool Testing</h3>
+          <p class="card-meta">With F. Marmolejo-Cossío</p>
+          <span class="status-badge">In preparation</span>
+        </div>
+      </div>
+      <div class="section-cta fade-in">
+        <a href="/research" class="btn btn-outline">View All Research &nearr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box fade-in">
+        <h2>Have an idea?<br /><span class="accent">Let's collaborate.</span></h2>
+        <p>I'm always open to discussing research opportunities, collaborations, and interesting projects.</p>
+        <a href="/contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-section {
+    background: var(--surface);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 2rem;
+  }
+
+  .about-text {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-education {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .edu-card {
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .edu-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .edu-year {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .research-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .research-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .research-card:hover {
+    border-color: rgba(200, 121, 65, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .card-number {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .research-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .card-meta {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+
+  .cta-box {
+    background: var(--surface);
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .cta-box h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .cta-box p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
